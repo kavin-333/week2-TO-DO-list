@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glass-container todo-container">
+    <h2 id="welcomeUser">Welcome!</h2>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Add a new task">
+      <button onclick="addTask()">➕</button>
+    </div>
+
+    <div class="task-filters">
+      <button class="active" onclick="filterTasks('all', this)">All (<span id="allCount">0</span>)</button>
+      <button onclick="filterTasks('active', this)">Active (<span id="activeCount">0</span>)</button>
+      <button onclick="filterTasks('completed', this)">Completed (<span id="completedCount">0</span>)</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <div class="task-stats">
+      <p>Total: <span id="totalTasks">0</span> |
+      Active: <span id="activeTasks">0</span> |
+      Completed: <span id="completedTasks">0</span></p>
+    </div>
+
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
